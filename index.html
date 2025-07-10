@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>القليوبية بين ايديك</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+    header {
+      background: rgb(76, 188, 180);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      background-color: white;
+      color: #004e92;
+      padding: 0.5rem 1rem;
+      margin: 0.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* فيديو */
+    .video-container {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 2rem 0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+      outline: none;
+    }
+
+    /* العناوين - خليهم على اليمين */
+    h2 {
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    /* المعالم تتحرك تلقائياً من الشمال لليمين بدون فراغات */
+    #destinations.scrolling-attractions {
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr; /* اجعل الاتجاه من اليسار لليمين */
+      padding: 1rem 0;
+      background: white;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+    #destinations .auto-scroll {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scrollLeftToRight 30s linear infinite;
+      width: 200%;
+    }
+    .event-slide {
+      display: inline-block;
+      width: 300px;
+      margin-left: 10px;
+      vertical-align: top;
+    }
+    .event-slide img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .event-slide p {
+      text-align: center;
+      margin: 0.5rem 0;
+      font-weight: 600;
+    }
+    @keyframes scrollLeftToRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* الأخبار */
+    .news-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 1rem 0;
+      scroll-behavior: smooth;
+    }
+    .news-slide {
+      flex: 0 0 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+    .news-slide img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    /* شارك تجربتك - حركة بدون فراغات وتبدأ من أول صورة */
+    #social {
+      background: white;
+      border-radius: 10px;
+      margin: 2rem 0;
+      padding: 1rem 0;
+      overflow: hidden;
+    }
+    #social .social-gallery {
+      display: flex;
+      width: max-content; /* العرض حسب المحتوى */
+      animation: scrollLeftToRight 30s linear infinite;
+    }
+    #social .social-gallery img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+
+    /* باقي الأقسام */
+    section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: rgb(76, 188, 180);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      القليوبية بين ايديك
+    </header>
+
+    <nav>
+      <a href="الوجهات.html">الوجهات</a>
+      <a href="الانشطة السياحية.html">الأنشطة السياحية</a>
+      <a href="خطط رحلتك.html">خطط رحلتك</a>
+      <a href="الخريطة التفاعلية.html">الخريطة التفاعلية</a>
+      <a href="الخدمات.html">الخدمات</a>
+    </nav>
+
+    <section class="video-container">
+      <video src="C:\Users\lekaa\Downloads\مالا تعرفه عن محافظة القليوبية.mp4" autoplay muted loop playsinline preload="auto"></video>
+    </section>
+
+    <section id="destinations" class="scrolling-attractions">
+      <h2> المعالم السياحية</h2>
+      <div class="auto-scroll">
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\images (7).jpg" alt="قصر محمد علي باشا " />
+          <p>قصر محمد علي باشا</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\images (9).jpg" alt="القناطر الخيرية" />
+          <p>القناطر الخيرية</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\images (8).jpg" alt="منطقة أتريب الأثرية" />
+          <p>منطقة أتريب الأثرية</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\مسجد-السلطان-الأشرف-برسباي.jpg" alt="مسجد سيدي عواض" />
+          <p>مسجد سيدي عواض</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\مسجد-الظاهر-بيبرس-بقليوب.jpg" alt="مسجد الظاهر بيبرس" />
+          <p>مسجد الظاهر بيبرس</p>
+        </div>
+        <!-- تكرار الصور -->
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\images (7).jpg" alt="قصر محمد علي باشا " />
+          <p>قصر محمد علي باشا</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\images (9).jpg" alt="القناطر الخيرية" />
+          <p>القناطر الخيرية</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\images (8).jpg" alt="منطقة أتريب الأثرية" />
+          <p>منطقة أتريب الأثرية</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\مسجد-السلطان-الأشرف-برسباي.jpg" alt="مسجد سيدي عواض" />
+          <p>مسجد سيدي عواض</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\مسجد-الظاهر-بيبرس-بقليوب.jpg" alt="مسجد الظاهر بيبرس" />
+          <p>مسجد الظاهر بيبرس</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities">
+      <h2>الفعاليات القادمة</h2>
+      <div class="scrolling-attractions">
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\مهرجان التراث الشعبي.jpg" alt="مهرجان التراث الشعبي" />
+          <p>مهرجان التراث الشعبي - أغسطس 2025</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\1935490_0.jpeg" alt="ورش عمل" />
+          <p>ورش عمل لأشغال الفنون التراثية - كل جمعة</p>
+        </div>
+        <div class="event-slide">
+          <img src="C:\Users\lekaa\Downloads\عرض فني في قصر الثقافة.webp" alt="عرض فني" />
+          <p>عرض فني في قصر الثقافة - 20 يوليو</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <h2>أحدث الأخبار</h2>
+      <div class="news-container">
+        <div class="news-slide">
+          <img src="C:\Users\lekaa\Downloads\68.jpg" alt="خبر 1" />
+          <p>محافظ القليوبية يستقبل أول رحلة متكاملة لزيارة المعالم السياحية والأثرية</p>
+        </div>
+        <div class="news-slide">
+          <img src="C:\Users\lekaa\Downloads\IMG-20250703-WA0000.webp" alt="خبر 2" />
+          <p>محافظ القليوبية يلتقي بسائحين أجانب خلال جولته بالقناطر الخيرية</p>
+        </div>
+        <div class="news-slide">
+          <img src="C:\Users\lekaa\Downloads\110784-أرض-المحلج-بالقناطر-الخيرية.jpg" alt="خبر 3" />
+          <p>منتجع سياحي عالمي بالقناطر.. خطة لإعادة إحياء المدينة التراثية</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="social">
+      <h2>شارك تجربتك</h2>
+      <div class="social-gallery">
+        <img src="C:\Users\lekaa\Downloads\images (14).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\45.jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (11).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (12).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (15).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (13).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (14).jpg" alt="مشاركة الزوار" />
+        <!-- تكرار الصور للسلاسة -->
+        <img src="C:\Users\lekaa\Downloads\images (14).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\45.jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (11).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (12).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (15).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (13).jpg" alt="مشاركة الزوار" />
+        <img src="C:\Users\lekaa\Downloads\images (14).jpg" alt="مشاركة الزوار" />
+      </div>
+      <p>تعرف على ما يقوم به الزوار في القليوبية، واستخدم <strong>#ThisIsQalyubia</strong> على منشوراتك، فقد ترى نفسك هنا!</p>
+    </section>
+
+    <section id="survey">
+      <h2>استبيان تقييم الرحلة</h2>
+      <p>ساعدنا نحسن تجربتك، جاوب على هذا <a href="#">الاستبيان</a>.</p>
+    </section>
+
+    <footer>
+      © 2025 الخدمات السياحية لمحافظة القليوبية
+    </footer>
+  </div>
+
+</body>
+</html>
