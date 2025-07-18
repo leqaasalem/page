@@ -1,59 +1,36 @@
+https://leqaasalem.github.io/page/
+الكود 
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عرض صور القناطر الخيرية</title>
+  <title>فيديو القليوبية</title>
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       height: 100%;
       overflow: hidden;
     }
 
-    #slider {
+    video {
       position: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition: background-image 1s ease-in-out;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
 
-  <div id="slider"></div>
-
-  <script>
-    const images = [
-      'شلالات القناطر الخيرية.jpg',
-      'القناطر الجديدة.jpg',
-      'pexels-eslames1-27899317.jpg',
-      'pexels-eslames1-27899344.jpg',
-      'pexels-eslames1-27914021.jpg',
-      'EL-Obour_city_egypt_9.jpg',
-      'pexels-cristian-bagnarello-3619432-5727263.jpg',
-      '480739594_670592818640553_7806230983922245406_n.jpg',
-      'EL-Obour_city_egypt_9.jpg',
-      'pexels-moh-adbelghaffar-33009729.jpg'
-    ];
-
-    let index = 0;
-    const slider = document.getElementById('slider');
-
-    function changeBackground() {
-      slider.style.backgroundImage = `url('${images[index]}')`;
-      index = (index + 1) % images.length;
-    }
-
-    changeBackground();
-    setInterval(changeBackground, 3000);
-  </script>
+  <video src="project - Made with Clipchamp (1).mp4" autoplay muted loop playsinline></video>
 
 </body>
 </html>
